@@ -7,4 +7,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <style name="RoundedCornerButton" parent="@style/Widget.AppCompat.Button.Colored">
+        <item name="background">@drawable/inset</item>
+        <item name="colorButtonNormal">#1a237e</item>
+        <item name="colorControlHighlight">#673ab7</item>
+    </style>
 </resources>
