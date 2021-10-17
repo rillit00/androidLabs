@@ -4,4 +4,5 @@
     <string name="Text">Текст</string>
     <string name="_2">Кнопка 2</string>
     <string name="_3">Кнопка 3</string>
+    <string name="choiceActivity">Переход на другую страницу</string>
 </resources>

@@ -1,6 +1,7 @@
 package com.androidlabs.firstproject;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     Button btn1;
     Button btn2;
     Button btn3;
+    Button changeActivity;
     TextView textView;
 
     @Override
@@ -25,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         btn1 = findViewById(R.id.btn1);
         btn2 = findViewById(R.id.btn2);
         btn3 = findViewById(R.id.btn3);
+        changeActivity = findViewById(R.id.changeActivity);
 
         View.OnClickListener oclBtnOk = new View.OnClickListener() {
             @SuppressLint({"ResourceAsColor", "SetTextI18n", "NonConstantResourceId"})
@@ -42,6 +45,10 @@ public class MainActivity extends AppCompatActivity {
                                 "Третья кнопка нажата!", Toast.LENGTH_SHORT);
                         toast.show();
                         break;
+                    case R.id.changeActivity:
+                        Intent intent = new Intent(getApplicationContext(),SecondActivity.class);
+                        startActivity(intent);
+                        break;
                 }
             }
         };
@@ -49,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
         btn1.setOnClickListener(oclBtnOk);
         btn2.setOnClickListener(oclBtnOk);
         btn3.setOnClickListener(oclBtnOk);
+        changeActivity.setOnClickListener(oclBtnOk);
     }
 
 
